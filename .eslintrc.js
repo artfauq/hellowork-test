@@ -12,7 +12,7 @@ module.exports = {
       jsx: true,
     },
     ecmaVersion: 2020,
-    project: 'tsconfig.eslint.json',
+    project: './tsconfig.eslint.json',
     sourceType: 'module',
   },
   settings: {
@@ -23,7 +23,7 @@ module.exports = {
       },
       typescript: {
         alwaysTryTypes: true,
-        project: 'tsconfig.eslint.json',
+        project: './tsconfig.eslint.json',
       },
     },
   },
@@ -45,7 +45,6 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   rules: {
-    // Standard rules
     'class-methods-use-this': 'off',
     'consistent-return': 'error',
     'default-case': 'error',
@@ -75,7 +74,6 @@ module.exports = {
     ],
     'prefer-regex-literals': 'off',
 
-    // eslint-plugin-import rules
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -110,10 +108,12 @@ module.exports = {
     ],
     'import/prefer-default-export': 'off',
 
-    // eslint-plugin-unused-imports rules
     'unused-imports/no-unused-imports': 'error',
 
     'react/jsx-props-no-spreading': 'off',
+    'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
+
+    '@typescript-eslint/no-unused-vars': 'warn',
   },
 }

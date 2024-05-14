@@ -1,6 +1,32 @@
-import '@src/styles/globals.css'
 import type { AppProps } from 'next/app'
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import { ChakraProvider } from '@chakra-ui/react'
+import { IntlProvider } from 'react-intl'
+
+import theme from '@src/theme'
+import { fonts } from '@src/theme/fonts'
+import { trpc } from '@src/utils/trpc'
+
+import '@src/styles/globals.css'
+
+function App({ Component, pageProps }: AppProps) {
+  return (
+    <>
+      {/* eslint-disable-next-line react/no-unknown-property */}
+      <style jsx global>
+        {`
+          :root {
+            --font-raleway: ${fonts.raleway.style.fontFamily};
+          }
+        `}
+      </style>
+      <IntlProvider locale="fr">
+        <ChakraProvider theme={theme} resetCSS>
+          <Component {...pageProps} />
+        </ChakraProvider>
+      </IntlProvider>
+    </>
+  )
 }
+
+export default trpc.withTRPC(App)
