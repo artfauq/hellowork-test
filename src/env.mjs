@@ -7,6 +7,8 @@ export const env = createEnv({
    * isn't built with invalid env vars.
    */
   server: {
+    JOBIJOBA_CLIENT_ID: z.string(),
+    JOBIJOBA_CLIENT_SECRET: z.string(),
     NODE_ENV: z.enum(['development', 'test', 'production']).default('development'),
   },
 
@@ -24,6 +26,8 @@ export const env = createEnv({
    * middlewares) or client-side so we need to destruct manually.
    */
   runtimeEnv: {
+    JOBIJOBA_CLIENT_ID: process.env.JOBIJOBA_CLIENT_ID,
+    JOBIJOBA_CLIENT_SECRET: process.env.JOBIJOBA_CLIENT_SECRET,
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
     NODE_ENV: process.env.NODE_ENV,
   },

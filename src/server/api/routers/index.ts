@@ -1,1 +1,1 @@
-// Export all routers
+export { jobRouter } from './job'
