@@ -11,6 +11,8 @@ const styles: GlobalStyles = {
       bg: 'background',
     },
     '#__next': {
+      display: 'flex',
+      flexDirection: 'column',
       height: '100%',
     },
     'a': {

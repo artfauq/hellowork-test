@@ -7,9 +7,7 @@ import theme from '@src/theme'
 import { fonts } from '@src/theme/fonts'
 import { trpc } from '@src/utils/trpc'
 
-import '@src/styles/globals.css'
-
-function App({ Component, pageProps }: AppProps) {
+const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       {/* eslint-disable-next-line react/no-unknown-property */}

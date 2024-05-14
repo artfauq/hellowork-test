@@ -59,6 +59,7 @@ module.exports = {
     'max-classes-per-file': 'off',
     'no-console': 'off',
     'no-extra-semi': 'off',
+    'no-nested-ternary': 'off',
     'no-param-reassign': 'off',
     'no-promise-executor-return': 'off',
     'no-underscore-dangle': 'off',
@@ -110,10 +111,19 @@ module.exports = {
 
     'unused-imports/no-unused-imports': 'error',
 
+    'react/function-component-definition': [
+      'error',
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
     'react/jsx-props-no-spreading': 'off',
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/require-default-props': 'off',
 
+    '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
   },
 }

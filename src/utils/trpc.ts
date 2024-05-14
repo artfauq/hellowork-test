@@ -1,5 +1,6 @@
 import { httpBatchLink } from '@trpc/client'
 import { createTRPCNext } from '@trpc/next'
+import superjson from 'superjson'
 
 import { AppRouter } from '@src/server/api'
 
@@ -39,6 +40,7 @@ export const trpc = createTRPCNext<AppRouter>({
           },
         }),
       ],
+      transformer: superjson,
     }
   },
   /**

@@ -1,40 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Test technique Site Carrière
 
-## Getting Started
+## À propos
 
-First, run the development server:
+Le but de cet exercice est de construire une petite application fullstack en next.js. Cette application doit :
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Récupérer les offres emploi sur la ville de Bordeaux à partir de l'API de Jobijoba
+- Proposer une page (stylisée avec un peu de CSS) qui présente ces offres et permet d’y postuler (via l’URL de redirection)
+- Proposer une pagination
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Précisions :
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- Interface : vous êtes libre quant à l'affichage des offres (blocs, liste...).
+- Packaging : il faut que nous soyons capables de tester le projet localement rapidement, mais vous êtes libre sur la manière de nous l'envoyer.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Durée : l'idée est de ne pas dépasser 3-4 heures, même si votre application n'est pas complètement terminée.
+Documentation API en PJ.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Pour commencer
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Cloner le projet
+- Installer les dépendances: `npm install` ou `yarn install`
+- Renseigner les variables d'environnement en copiant le fichier `.env.example` en `.env.local` et en renseignant les variables
+- Lancer le projet : `npm run dev` ou `yarn dev`
